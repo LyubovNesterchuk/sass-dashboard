@@ -1,6 +1,33 @@
-@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("/sass-dashboard/assets/Montserrat-Regular.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/sass-dashboard/assets/Montserrat-Medium.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Semibold.woff2") format("woff2"), url("../fonts/Montserrat-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/sass-dashboard/assets/Montserrat-Bold.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 /***
-    The new CSS reset - version 1.11 (last updated 20.9.2023)
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
 /*
@@ -31,16 +58,18 @@ html {
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a,
-button {
+a, button {
   cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol,
-ul,
-menu {
+ol, ul, menu, summary {
   list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+  counter-reset: revert;
 }
 
 /* For images to not be able to exceed their container */
@@ -55,8 +84,7 @@ table {
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input,
-textarea {
+input, textarea {
   -webkit-user-select: auto;
 }
 
@@ -97,11 +125,6 @@ meter {
   color: unset;
 }
 
-/* remove default dot (•) sign */
-::marker {
-  content: initial;
-}
-
 /* fix the feature of 'hidden' attribute.
    display:revert; revert to element instead of attribute */
 :where([hidden]) {
@@ -130,4 +153,58 @@ meter {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #b5b5be;
+  background-color: #13131a;
+}
+
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+summary {
+  list-style-type: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+page {
+  min-width: 375px;
+}
+
+@media only screen and (min-width: 1200px) {
+  page {
+    display: grid;
+    grid-template-columns: 248 1fr;
+    grid-template-rows: 68px 1rf;
+  }
 }

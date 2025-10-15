@@ -39,4 +39,4 @@
     fetch(link.href, fetchOpts);
   }
 })();
-const style = "";
+const main = "";
