@@ -1,0 +1,11 @@
+@use "../utils/mixins" as mx;
+
+page {
+    min-width: 375px;
+
+    @include mx.mq("lg") {
+        display: grid;
+        grid-template-columns: 248 1fr;
+        grid-template-rows: 68px 1rf;
+    }
+}
