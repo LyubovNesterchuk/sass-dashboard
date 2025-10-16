@@ -174,7 +174,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.menu-btn, .menu-link {
+.search-input, .menu-btn, .menu-link {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.43;
@@ -334,6 +334,7 @@ summary {
 
 .menu-list {
   border-top: 1px solid;
+  border-color: #292932;
 }
 
 .menu-link {
@@ -412,7 +413,7 @@ summary {
   margin-right: auto;
   color: #fafafb;
 }
-.menu-btn.icon {
+.menu-btn-icon {
   fill: currentColor;
 }
 .sidebar .menu-btn {
@@ -459,6 +460,74 @@ summary {
 .notification.is-notify {
   opacity: 1;
 }
+
+.notification-btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+  color: #92929d;
+}
+.notification-btn-icon {
+  fill: currentColor;
+}
+.notification-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #f07f2c;
+  border-radius: 50%;
+}
+
+.search-field {
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  transition: 300ms ease;
+  -webkit-transition-property: width, color;
+  -moz-transition-property: width, color;
+  transition-property: width, color;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  color: #92929d;
+  overflow: hidden;
+}
+.search-field:focus-within {
+  color: #fafafb;
+}
+
+.search-icon {
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  fill: currentColor;
+  margin-right: 12px;
+}
+
+.search-input {
+  min-width: 165px;
+  min-height: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     gap: 36px;
@@ -467,6 +536,7 @@ summary {
     grid-template-areas: "welcome welcome" "co-workers co-workers" "tasks reports";
   }
 }
+
 @media only screen and (min-width: 1200px) {
   .page {
     display: grid;
@@ -496,7 +566,11 @@ summary {
   .menu-btn {
     display: none;
   }
+  .search-field {
+    margin-right: auto;
+  }
 }
+
 @media only screen and (max-width: 1199.98px) {
   .menu {
     -webkit-transition: 300ms ease;
@@ -521,5 +595,26 @@ summary {
     -webkit-transition-delay: 300ms;
        -moz-transition-delay: 300ms;
             transition-delay: 300ms;
+  }
+  .search-field {
+    width: 30px;
+  }
+  .search-field:focus-within {
+    width: 200px;
+  }
+  .search-input {
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    transition: 300ms ease;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    opacity: 0;
+  }
+  .search-input:focus {
+    opacity: 1;
+    -webkit-transition-delay: 400ms;
+       -moz-transition-delay: 400ms;
+            transition-delay: 400ms;
   }
 }
