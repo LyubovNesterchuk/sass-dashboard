@@ -33,14 +33,12 @@
 }
 
 
-
 .board-caption {
     @extend %accent-text;
 
     margin-bottom: 8px;
     color: fn.get-color("light-primary");
 }
-
 
 
 .board-details {
@@ -63,7 +61,6 @@
 }
 
 
-
 .person-caption {
     @extend %details;
 }
@@ -82,20 +79,4 @@
     margin-bottom: auto;
     text-align: right;
     color: fn.get-color("light-secondary");
-}
-.badge {
-}
-.warning {
-}
-.error {
-}
-.hide {
-}
-.co-workers-btn {
-}
-.btn {
-}
-.btn--secondary {
-}
-.btn-inner {
 }

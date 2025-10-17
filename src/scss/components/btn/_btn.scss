@@ -27,3 +27,12 @@ $btn-types: (
 @import "btn-base";
 
 
+@import "types/danger";
+@import "types/default";
+@import "types/frame";
+@import "types/info";
+@import "types/primary";
+@import "types/secondary";
+@import "types/success";
+@import "types/transparent";
+@import "types/warning";

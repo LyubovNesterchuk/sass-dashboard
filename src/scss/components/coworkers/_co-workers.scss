@@ -12,6 +12,7 @@
         border-radius: 12px;
     }
 }
+
 .co-workers-wrapper {
     max-height: 388px;
     padding: 16px;
@@ -32,7 +33,7 @@
 .co-workers-title {
     @extend %details;
 
-     margin-bottom: 28px;
+    margin-bottom: 28px;
 
     @include mx.mq("xl") {
         margin-bottom: 36px;

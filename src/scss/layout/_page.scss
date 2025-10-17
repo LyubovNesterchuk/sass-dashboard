@@ -5,11 +5,11 @@
 
     @include mx.mq("lg") {
         display: grid;
-        grid-template-columns: 248 1fr;
-        grid-template-rows: 68px 1rf;
+        grid-template-columns: 248px 1fr;
+        grid-template-rows: 68px 1fr;
 
         grid-template-areas:
-        "sidebar header"
-        "sidebar main";
+            "sidebar header"
+            "sidebar main";
     }
 }
