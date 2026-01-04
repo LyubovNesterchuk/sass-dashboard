@@ -28,20 +28,20 @@ export default defineConfig({
     },
   ],
 
-  build: {
-    minify: false,
-    rollupOptions: {
-      input: Object.fromEntries(
-        glob
-          .sync(["./*.html", "./pages/**/*.html"])
-          .map((file) => [
-            path.relative(__dirname, file).replace(/\.html$/, ""),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
-      output: {
-        assetFileNames: "assets/[name].[ext]",
-      },
-    },
+ build: {
+  minify: false,
+  rollupOptions: {
+    input: Object.fromEntries(
+      glob
+        .sync(["./*.html", "./pages/**/*.html"])
+        .map((file) => [
+          path.relative(__dirname, file).replace(/\.html$/, ""),
+          fileURLToPath(new URL(file, import.meta.url)),
+        ])
+    ),
   },
-});
+},
+output: {
+  assetFileNames: "assets/[name]-[hash][extname]",
+},
+    })
