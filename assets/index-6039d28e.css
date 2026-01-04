@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/sass-dashboard/assets/Montserrat-Regular.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Regular.woff") format("woff");
+  src: url("/sass-dashboard/assets/Montserrat-Regular-81e1ca9d.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Regular-7eb0fecf.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/sass-dashboard/assets/Montserrat-Medium.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Medium.woff") format("woff");
+  src: url("/sass-dashboard/assets/Montserrat-Medium-c6c0b4fe.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Medium-ea96c032.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/sass-dashboard/assets/Montserrat-Bold.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Bold.woff") format("woff");
+  src: url("/sass-dashboard/assets/Montserrat-Bold-7ddc3494.woff2") format("woff2"), url("/sass-dashboard/assets/Montserrat-Bold-e20f5894.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -53,8 +53,7 @@
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-      text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -116,9 +115,6 @@ meter {
   color: unset;
 }
 :-ms-input-placeholder {
-  color: unset;
-}
-::-ms-input-placeholder {
   color: unset;
 }
 ::placeholder {
