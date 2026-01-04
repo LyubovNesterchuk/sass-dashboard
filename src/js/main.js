@@ -1,6 +1,6 @@
 import "../scss/main.scss";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-
+// import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from 'https://cdn.skypack.dev/body-scroll-lock';
 // Sidebar menu
 const refsMenu = {
   openMenuBtn: document.querySelector(".js-menu-open"),
